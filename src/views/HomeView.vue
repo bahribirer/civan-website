@@ -24,8 +24,9 @@ import AboutSummary from '../components/AboutSummary.vue';
 </template>
 
 <style scoped>
-.py-6 { padding: 5rem 0; }
-.bg-primary { background-color: var(--c-primary); }
+.py-6 { padding: 6rem 0; }
+.bg-primary { background-color: #0f172a; } /* Dark Slate for Professional Look */
+:global(.my-app-dark) .bg-primary { background-color: #020617; }
 .text-white { color: white; }
 .text-center { text-align: center; }
 .mb-4 { margin-bottom: 2rem; }

@@ -148,40 +148,55 @@ const openStoreModal = () => {
         </header>
 
         <!-- Mobile Drawer -->
-        <Drawer v-model:visible="isMobileMenuOpen" position="right" class="mobile-drawer" style="width: 80vw; max-width: 300px;">
-            <div class="flex flex-column gap-4 p-3">
-                <div class="logo-text-group mb-4">
-                    <span class="logo-title text-primary text-2xl">CİVANLAR</span>
+        <Drawer v-model:visible="isMobileMenuOpen" position="right" class="mobile-drawer border-none" style="width: 85vw; max-width: 320px;">
+            <template #header>
+                <div class="flex align-items-center gap-2">
+                     <div class="logo-box h-2rem w-2rem border-round-sm flex align-items-center justify-content-center bg-primary">
+                        <i class="pi pi-building text-white text-sm"></i>
+                     </div>
+                     <span class="font-bold text-xl text-primary">CİVANLAR</span>
                 </div>
-                
-                <a v-for="(item, index) in items" :key="index" 
-                   @click="navTo(item.path)" 
-                   class="mobile-link text-xl font-medium p-2 border-round hover:surface-100 cursor-pointer text-900 block"
-                   :style="{ color: isDark ? '#e2e8f0' : '#1f2937' }">
-                    {{ item.label }}
-                </a>
-                
-                <a @click="openStoreModal" 
-                   class="mobile-link text-xl font-bold p-2 border-round hover:surface-100 cursor-pointer text-primary block">
-                    <i class="pi pi-shopping-bag mr-2"></i> {{ t('nav.onlineStore') }}
-                </a>
+            </template>
+            <div class="flex flex-column h-full">
+                <!-- Menu Items -->
+                <div class="flex flex-column gap-2 mt-3">
+                    <a v-for="(item, index) in items" :key="index" 
+                    @click="navTo(item.path)" 
+                    class="mobile-link p-3 border-round-lg cursor-pointer flex align-items-center transition-duration-200"
+                    :class="{'text-primary surface-100 font-bold': router.currentRoute.value.path === item.path, 'text-700 hover:surface-50': router.currentRoute.value.path !== item.path}"
+                    v-ripple>
+                        <i class="pi mr-3 text-lg" :class="{'pi-home': index===0, 'pi-info-circle': index===1, 'pi-box': index===2, 'pi-briefcase': index===3, 'pi-pencil': index===4, 'pi-envelope': index===5 }"></i>
+                        <span class="text-lg font-medium">{{ item.label }}</span>
+                        <i class="pi pi-angle-right ml-auto text-400 text-sm"></i>
+                    </a>
 
-                <div class="separator h-1rem"></div>
+                     <!-- Store Link -->
+                     <a @click="openStoreModal" 
+                        class="mobile-link p-3 border-round-lg cursor-pointer flex align-items-center text-primary hover:surface-50 transition-duration-200 font-bold">
+                        <i class="pi pi-shopping-bag mr-3 text-lg"></i> 
+                        <span class="text-lg">{{ t('nav.onlineStore') }}</span>
+                         <span class="ml-auto text-xs bg-green-100 text-green-700 px-2 py-1 border-round">New</span>
+                    </a>
+                </div>
 
-                <div class="flex align-items-center justify-content-between p-2 surface-100 border-round">
-                    <span class="font-bold">Dark Mode</span>
+                <!-- Bottom Actions -->
+                <div class="mt-auto pt-4 border-top-1 border-200">
+                    <div class="flex align-items-center justify-content-between mb-4 px-2">
+                        <span class="text-sm font-medium text-500">Appearance</span>
+                         <Button 
+                            :icon="isDark ? 'pi pi-moon' : 'pi pi-sun'" 
+                            class="p-button-rounded p-button-text p-button-sm" 
+                            @click="toggleTheme" 
+                        />
+                    </div>
                      <Button 
-                        :icon="isDark ? 'pi pi-moon' : 'pi pi-sun'" 
-                        class="p-button-rounded p-button-sm" 
-                        @click="toggleTheme" 
+                        :label="t('nav.getQuote')" 
+                        icon="pi pi-arrow-right"
+                        iconPos="right"
+                        class="w-full brand-cta py-3 border-round-xl font-bold text-lg shadow-2" 
+                        @click="navTo('/contact')" 
                     />
                 </div>
-
-                 <Button 
-                        :label="t('nav.getQuote')" 
-                        class="w-full mt-2 brand-cta" 
-                        @click="navTo('/contact')" 
-                />
             </div>
         </Drawer>
         
