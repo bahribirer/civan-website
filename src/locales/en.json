@@ -1,0 +1,192 @@
+{
+    "home_cta": {
+        "title": "Ready to Start Your Project?",
+        "desc": "Contact us today for a free consultation and quote.",
+        "button": "Get in Touch"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About Us",
+        "products": "Products",
+        "services": "Services",
+        "blog": "Blog",
+        "contact": "Contact",
+        "getQuote": "Get a Quote",
+        "onlineStore": "Online Store",
+        "exploreProducts": "Our Products"
+    },
+    "common": {
+        "whatsapp": "WhatsApp Line",
+        "comingSoonTitle": "Coming Soon!",
+        "comingSoonDesc": "Our online sales platform is under development. For now, you can order from our store or by phone."
+    },
+    "hero": {
+        "label": "SINCE 2006",
+        "title": "Building Dreams with <br><span class=\"highlight\">Experience & Trust</span>",
+        "subtitle": "Your reliable partner for construction materials, project management, and turnkey solutions in Istanbul and beyond.",
+        "paints": "Paints",
+        "tiles": "Ceramics & Tiles"
+    },
+    "about": {
+        "title": "About Us",
+        "subtitle": "Deep-rooted experience from the field to your projects.",
+        "whoWeAre": "Who We Are",
+        "teamPhoto": "Office / Team Photo",
+        "desc1": "Civanlar Construction is a well-established family company serving Istanbul since 2006. We combine family warmth with corporate professionalism.",
+        "desc2": "Our most distinct feature is managing the entire process with real contracting experience derived directly from the field. Our founder is an active contractor who personally monitors projects.",
+        "ourApproach": "Our Approach",
+        "approachDesc": "We manage all processes not just as a seller, but as a solution partner.",
+        "whyChoose": "Why Choose Us?",
+        "reasons": {
+            "1": "Correct Guidance & Consultancy",
+            "2": "Real Field Experience",
+            "3": "One-Stop Solution for All Needs",
+            "4": "Fast Delivery & Service",
+            "5": "Tested Quality Products"
+        }
+    },
+    "services": {
+        "title": "Our Activity Areas",
+        "subtitle": "Your professional partner for construction, renovation, and supply.",
+        "tabs": {
+            "store": "Construction Market",
+            "construction": "Construction & Contracting",
+            "renovation": "Renovation Services",
+            "turnkey": "Project & Application",
+            "supply": "Material Supply"
+        },
+        "store": {
+            "title": "Construction Market Sales",
+            "desc": "Wholesale and retail sales with a wide A-Z product range.",
+            "list": [
+                "Wholesale and Retail Sales",
+                "Bathroom Design & Furniture",
+                "Paints, Ceramics, Plumbing",
+                "Technical support for product selection"
+            ]
+        },
+        "construction": {
+            "title": "Construction & Contracting",
+            "desc": "We manage the entire process with contractor experience.",
+            "list": [
+                "Rough Construction Works",
+                "Fine Construction Works",
+                "Site Management",
+                "Turnkey Solutions"
+            ]
+        },
+        "renovation": {
+            "title": "Home, Office & Bathroom Renovation",
+            "desc": "Complete renovation for your home or workplace.",
+            "list": [
+                "Bathroom & Kitchen Renovation",
+                "Complete Home Renovation",
+                "Office & Workplace Renewal",
+                "Plumbing & Decoration"
+            ]
+        },
+        "turnkey": {
+            "title": "Project & Application (Turnkey)",
+            "desc": "From design to delivery, we are your solution partner, not just a seller.",
+            "list": [
+                "Architectural Project & Design",
+                "End-to-End Application",
+                "Professional Team Management",
+                "On-Time Delivery"
+            ]
+        },
+        "supply": {
+            "title": "Site & Project Material Supply",
+            "desc": "Special supply service for large projects and construction sites.",
+            "list": [
+                "Project-Specific Material Supply",
+                "Site Logistics",
+                "Bulk Purchase Advantages",
+                "Fast Shipment"
+            ]
+        }
+    },
+    "products_page": {
+        "title": "Product Groups",
+        "subtitle": "Thousands of Product Varieties from A to Z",
+        "categories": {
+            "paints_interior": "Interior Paints",
+            "paints_exterior": "Exterior Paints",
+            "ceramics": "Ceramics & Tiles",
+            "bathroom_products": "Bathroom Products & Furniture",
+            "kitchen": "Kitchen Products",
+            "chemicals": "Construction Chemicals",
+            "flooring": "Flooring",
+            "plumbing": "Electrical & Plumbing",
+            "hardware": "Hardware",
+            "accessories": "Bathroom Accessories",
+            "garden": "Garden Stones & Marble",
+            "doors": "Doors",
+            "car_care": "Car Care Products",
+            "tools": "Brushes, Tools & Accessories"
+        }
+    },
+    "contact": {
+        "title": "Contact Us",
+        "subtitle": "We are here to help with your projects and material needs.",
+        "formTitle": "Send Us a Message",
+        "name": "Full Name",
+        "email": "Email",
+        "phone": "Phone",
+        "addressLabel": "Address",
+        "subject": "Subject",
+        "message": "Message",
+        "send": "Send Message",
+        "success": "Thank you! Your message has been sent.",
+        "visit": "Visit Us",
+        "call": "Call Us",
+        "emailUs": "Email Us",
+        "hours": "Working Hours",
+        "days": "Mon - Sat: 08:30 - 19:00",
+        "closed": "Sunday: Closed"
+    },
+    "footer": {
+        "desc": "Operating since 2006, Civanlar Construction brings you quality building materials and professional contracting services with real field experience.",
+        "quickLinks": "Quick Links",
+        "rights": "All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+    },
+    "home_about": {
+        "label": "SINCE 2006",
+        "title": "Why Choose <span class=\"text-primary\">Civanlar?</span>",
+        "lead": "We manage the entire process with real contracting experience from the field. We are not just sellers; we are your solution partners.",
+        "desc": "Civanlar Construction is a well-established family company based in Istanbul. Despite our family roots, we operate with a fully corporate structure. Our founder and manager is an active contractor who has personally monitored projects, bringing this direct experience to our building market and project applications.",
+        "features": {
+            "1": "Experienced & Professional Team",
+            "2": "Solution-Oriented Approach",
+            "3": "Wide Range of Quality Products",
+            "4": "Timely Delivery & Execution"
+        },
+        "button": "Read More About Us",
+        "imageAlt": "About Us Image"
+    },
+    "home_services": {
+        "title": "Our Services",
+        "subtitle": "Comprehensive solutions for all your construction needs",
+        "items": {
+            "1": {
+                "title": "Construction & Contracting",
+                "desc": "Complete project management and execution for residential and commercial buildings."
+            },
+            "2": {
+                "title": "Home Renovation",
+                "desc": "Kitchen, bathroom, and full home remodeling services."
+            },
+            "3": {
+                "title": "Building Materials",
+                "desc": "High-quality construction materials from top brands for all your needs."
+            },
+            "4": {
+                "title": "Project Consulting",
+                "desc": "Professional guidance and planning for your construction projects."
+            }
+        },
+        "button": "Learn More"
+    }
+}

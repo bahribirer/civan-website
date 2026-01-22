@@ -1,0 +1,192 @@
+{
+    "home_cta": {
+        "title": "Projenize Başlamaya Hazır mısınız?",
+        "desc": "Ücretsiz keşif ve teklif için bizimle bugün iletişime geçin.",
+        "button": "İletişime Geçin"
+    },
+    "nav": {
+        "home": "Ana Sayfa",
+        "about": "Hakkımızda",
+        "products": "Ürünler",
+        "services": "Hizmetler",
+        "blog": "Blog",
+        "contact": "İletişim",
+        "getQuote": "Teklif Al",
+        "onlineStore": "Online Mağaza",
+        "exploreProducts": "Ürünleri İncele"
+    },
+    "common": {
+        "whatsapp": "WhatsApp Hattı",
+        "comingSoonTitle": "Çok Yakında!",
+        "comingSoonDesc": "Online satış platformumuz geliştirme aşamasındadır. Şimdilik mağazamızdan veya telefonla sipariş verebilirsiniz."
+    },
+    "hero": {
+        "label": "2006'DAN BERİ",
+        "title": "Hayallerinizi <br><span class=\"highlight\">Tecrübe ve Güvenle</span> İnşa Ediyoruz",
+        "subtitle": "İstanbul ve çevresinde, inşaat malzemeleri, proje yönetimi ve anahtar teslim çözümler için güvenilir çözüm ortağınız.",
+        "paints": "Boyalar",
+        "tiles": "Seramik & Fayans"
+    },
+    "about": {
+        "title": "Hakkımızda",
+        "subtitle": "Sahadan gelen köklü tecrübe, projelerinize güç katıyor.",
+        "whoWeAre": "Biz Kimiz?",
+        "teamPhoto": "Ofis / Ekip Fotoğrafı",
+        "desc1": "Civanlar İnşaat ve Yapı Malzemeleri, 2006 yılından bu yana İstanbul merkezli olarak hizmet veren köklü bir aile şirketidir. Aile şirketi samimiyetiyle kurumsal profesyonelliği birleştiriyoruz.",
+        "desc2": "En önemli farkımız, sürecin tamamının sahadan gelen gerçek müteahhitlik tecrübesiyle yönetilmesidir. Kurucumuz ve yöneticimiz aktif olarak sahada bulunmuş, projeleri birebir takip etmiş bir müteahhittir.",
+        "ourApproach": "Yaklaşımımız",
+        "approachDesc": "Tüm süreçleri sadece bir satıcı olarak değil, bir çözüm ortağı olarak yönetiyoruz.",
+        "whyChoose": "Neden Biz?",
+        "reasons": {
+            "1": "Doğru Yönlendirme & Danışmanlık",
+            "2": "Gerçek Saha Tecrübesi",
+            "3": "Tek Noktadan Tüm İhtiyaçlar",
+            "4": "Hızlı Teslimat & Servis",
+            "5": "Denenmiş Kaliteli Ürünler"
+        }
+    },
+    "services": {
+        "title": "Faaliyet Alanlarımız",
+        "subtitle": "İnşaat, tadilat ve malzeme tedariğinde profesyonel çözüm ortağınız.",
+        "tabs": {
+            "store": "Yapı Market Satışı",
+            "construction": "İnşaat & Taahhüt",
+            "renovation": "Tadilat Hizmetleri",
+            "turnkey": "Proje & Uygulama",
+            "supply": "Malzeme Temini"
+        },
+        "store": {
+            "title": "Yapı Market Mağaza Satışı",
+            "desc": "A'dan Z'ye geniş ürün yelpazemizle, toptan ve perakende satış.",
+            "list": [
+                "Toptan ve Perakende Satış",
+                "Banyo Tasarımı & Mobilya",
+                "Boya, Seramik, Tesisat",
+                "Doğru ürün seçimi için teknik destek"
+            ]
+        },
+        "construction": {
+            "title": "İnşaat & Taahhüt İşleri",
+            "desc": "Sürecin tamamını müteahhit tecrübesiyle yönetiyoruz.",
+            "list": [
+                "Kaba İnşaat İşleri",
+                "İnce İnşaat İşleri",
+                "Şantiye Yönetimi",
+                "Anahtar Teslim Çözümler"
+            ]
+        },
+        "renovation": {
+            "title": "Ev, İş Yeri & Banyo Tadilatı",
+            "desc": "Evinizi veya iş yerinizi baştan aşağı yeniliyoruz.",
+            "list": [
+                "Banyo & Mutfak Tadilatı",
+                "Komple Ev Tadilatı",
+                "Ofis & İş Yeri Yenileme",
+                "Tesisat & Dekorasyon"
+            ]
+        },
+        "turnkey": {
+            "title": "Proje ve Uygulama (Anahtar Teslim)",
+            "desc": "Tasarımdan teslime, satıcı değil çözüm ortağıyız.",
+            "list": [
+                "Mimari Proje & Tasarım",
+                "Uçtan Uca Uygulama",
+                "Profesyonel Ekip Yönetimi",
+                "Zamanında Teslim"
+            ]
+        },
+        "supply": {
+            "title": "Şantiye & Proje Malzeme Temini",
+            "desc": "Büyük projeler ve şantiyeler için özel tedarik hizmeti.",
+            "list": [
+                "Projelere Özel Malzeme Temini",
+                "Şantiye Lojistiği",
+                "Toplu Alım Avantajları",
+                "Hızlı Sevkiyat"
+            ]
+        }
+    },
+    "products_page": {
+        "title": "Ürün Grupları",
+        "subtitle": "A'dan Z'ye Binlerce Ürün Çeşidi",
+        "categories": {
+            "paints_interior": "İç Cephe Boyaları",
+            "paints_exterior": "Dış Cephe Boyaları",
+            "ceramics": "Seramik & Fayans",
+            "bathroom_products": "Banyo Ürünleri & Mobilyaları",
+            "kitchen": "Mutfak Ürünleri",
+            "chemicals": "Yapı Kimyasalları",
+            "flooring": "Zemin Kaplamaları",
+            "plumbing": "Elektrik & Tesisat",
+            "hardware": "Hırdavat",
+            "accessories": "Banyo Aksesuarları",
+            "garden": "Bahçe Taşları & Mermer",
+            "doors": "Kapılar",
+            "car_care": "Araç Temizlik Ürünleri",
+            "tools": "Fırça, El Aletleri & Tamamlayıcılar"
+        }
+    },
+    "contact": {
+        "title": "İletişim",
+        "subtitle": "Projeleriniz ve malzeme ihtiyaçlarınız için yanınızdayız.",
+        "formTitle": "Bize Mesaj Gönderin",
+        "name": "Ad Soyad",
+        "email": "E-posta",
+        "phone": "Telefon",
+        "addressLabel": "Adres",
+        "subject": "Konu",
+        "message": "Mesaj",
+        "send": "Mesaj Gönder",
+        "success": "Teşekkürler! Mesajınız iletildi.",
+        "visit": "Bizi Ziyaret Edin",
+        "call": "Bizi Arayın",
+        "emailUs": "E-posta",
+        "hours": "Çalışma Saatleri",
+        "days": "Pzt - Cmt: 08:30 - 19:00",
+        "closed": "Pazar: Kapalı"
+    },
+    "footer": {
+        "desc": "2006'dan beri, gerçek saha tecrübesiyle kaliteli yapı malzemeleri ve profesyonel müteahhitlik hizmetleri sunuyoruz.",
+        "quickLinks": "Hızlı Bağlantılar",
+        "rights": "Tüm hakları saklıdır.",
+        "privacy": "Gizlilik Politikası",
+        "terms": "Kullanım Koşulları"
+    },
+    "home_about": {
+        "label": "2006'DAN BERİ",
+        "title": "Neden <span class=\"text-primary\">Civanlar?</span>",
+        "lead": "Tüm süreci sahadan gelen gerçek müteahhitlik tecrübesiyle yönetiyoruz. Biz sadece satıcı değil, çözüm ortağınızız.",
+        "desc": "Civanlar İnşaat, İstanbul merkezli köklü bir aile şirketidir. Aile köklerimize rağmen tamamen kurumsal bir yapıyla hareket ediyoruz. Kurucumuz ve yöneticimiz, projeleri bizzat takip etmiş aktif bir müteahhittir ve bu doğrudan tecrübeyi yapı marketimize ve proje uygulamalarımıza taşımaktadır.",
+        "features": {
+            "1": "Deneyimli & Profesyonel Ekip",
+            "2": "Çözüm Odaklı Yaklaşım",
+            "3": "Geniş ve Kaliteli Ürün Yelpazesi",
+            "4": "Zamanında Teslimat & Uygulama"
+        },
+        "button": "Hakkımızda Daha Fazla Bilgi",
+        "imageAlt": "Hakkımızda Görseli"
+    },
+    "home_services": {
+        "title": "Hizmetlerimiz",
+        "subtitle": "Tüm inşaat ihtiyaçlarınız için kapsamlı çözümler",
+        "items": {
+            "1": {
+                "title": "İnşaat & Taahhüt",
+                "desc": "Konut ve ticari yapılar için komple proje yönetimi ve uygulaması."
+            },
+            "2": {
+                "title": "Ev Tadilatı",
+                "desc": "Mutfak, banyo ve komple ev yenileme hizmetleri."
+            },
+            "3": {
+                "title": "Yapı Malzemeleri",
+                "desc": "Tüm ihtiyaçlarınız için en iyi markalardan kaliteli inşaat malzemeleri."
+            },
+            "4": {
+                "title": "Proje Danışmanlığı",
+                "desc": "İnşaat projeleriniz için profesyonel rehberlik ve planlama."
+            }
+        },
+        "button": "Daha Fazla"
+    }
+}
