@@ -150,38 +150,37 @@ const openStoreModal = () => {
         <!-- Mobile Drawer -->
         <Drawer v-model:visible="isMobileMenuOpen" position="right" class="mobile-drawer border-none" style="width: 85vw; max-width: 320px;">
             <template #header>
-                <div class="flex align-items-center gap-2">
-                     <div class="logo-box h-2rem w-2rem border-round-sm flex align-items-center justify-content-center bg-primary">
+                <div class="drawer-header-content" style="display: flex; align-items: center; gap: 0.5rem;">
+                     <div class="logo-box" style="height: 2rem; width: 2rem; padding: 0.25rem;">
                         <i class="pi pi-building text-white text-sm"></i>
                      </div>
                      <span class="font-bold text-xl text-primary">CİVANLAR</span>
                 </div>
             </template>
-            <div class="flex flex-column h-full">
+            <div class="drawer-content" style="display: flex; flex-direction: column; height: 100%;">
                 <!-- Menu Items -->
-                <div class="flex flex-column gap-2 mt-3">
+                <div class="menu-list" style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem;">
                     <a v-for="(item, index) in items" :key="index" 
                     @click="navTo(item.path)" 
-                    class="mobile-link p-3 border-round-lg cursor-pointer flex align-items-center transition-duration-200"
-                    :class="{'text-primary surface-100 font-bold': router.currentRoute.value.path === item.path, 'text-700 hover:surface-50': router.currentRoute.value.path !== item.path}"
+                    class="mobile-link-item"
                     v-ripple>
-                        <i class="pi mr-3 text-lg" :class="{'pi-home': index===0, 'pi-info-circle': index===1, 'pi-box': index===2, 'pi-briefcase': index===3, 'pi-pencil': index===4, 'pi-envelope': index===5 }"></i>
-                        <span class="text-lg font-medium">{{ item.label }}</span>
-                        <i class="pi pi-angle-right ml-auto text-400 text-sm"></i>
+                        <i class="pi menu-icon" :class="{'pi-home': index===0, 'pi-info-circle': index===1, 'pi-box': index===2, 'pi-briefcase': index===3, 'pi-pencil': index===4, 'pi-envelope': index===5 }"></i>
+                        <span class="menu-label">{{ item.label }}</span>
+                        <i class="pi pi-angle-right arrow-icon"></i>
                     </a>
 
                      <!-- Store Link -->
                      <a @click="openStoreModal" 
-                        class="mobile-link p-3 border-round-lg cursor-pointer flex align-items-center text-primary hover:surface-50 transition-duration-200 font-bold">
-                        <i class="pi pi-shopping-bag mr-3 text-lg"></i> 
-                        <span class="text-lg">{{ t('nav.onlineStore') }}</span>
-                         <span class="ml-auto text-xs bg-green-100 text-green-700 px-2 py-1 border-round">New</span>
+                        class="mobile-link-item store-mobile-link">
+                        <i class="pi pi-shopping-bag menu-icon"></i> 
+                        <span class="menu-label">{{ t('nav.onlineStore') }}</span>
+                         <span class="badge-new">New</span>
                     </a>
                 </div>
 
                 <!-- Bottom Actions -->
-                <div class="mt-auto pt-4 border-top-1 border-200">
-                    <div class="flex align-items-center justify-content-between mb-4 px-2">
+                <div class="drawer-footer" style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--c-border);">
+                    <div class="theme-row" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
                         <span class="text-sm font-medium text-500">Appearance</span>
                          <Button 
                             :icon="isDark ? 'pi pi-moon' : 'pi pi-sun'" 
@@ -343,12 +342,34 @@ const openStoreModal = () => {
 }
 
 /* Mobile Drawer */
-:global(.p-drawer) {
-    background: #ffffff !important;
-}
-:global(.my-app-dark) :global(.p-drawer) {
-    background: #0f172a !important;
-    color: #f1f5f9 !important;
-}
+/* Mobile Drawer Styles */
+:global(.p-drawer) { background: #ffffff !important; }
+:global(.my-app-dark) :global(.p-drawer) { background: #0f172a !important; color: #f1f5f9 !important; }
 :global(.p-dialog-mask) { z-index: 10000 !important; }
+
+.mobile-link-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: var(--c-text-main);
+    text-decoration: none;
+    font-weight: 500;
+}
+.mobile-link-item:hover { background-color: rgba(0,0,0,0.04); }
+:global(.my-app-dark) .mobile-link-item:hover { background-color: rgba(255,255,255,0.05); }
+
+.menu-icon { margin-right: 0.75rem; font-size: 1.1rem; color: var(--c-secondary); }
+.menu-label { font-size: 1rem; flex: 1; }
+.arrow-icon { font-size: 0.8rem; color: #9ca3af; }
+
+.store-mobile-link { color: var(--c-primary); font-weight: 700; background-color: rgba(30, 58, 138, 0.03); }
+.badge-new { 
+    background-color: #dcfce7; color: #15803d; 
+    font-size: 0.7rem; padding: 0.2rem 0.5rem; 
+    border-radius: 4px; margin-left: auto; 
+}
+:global(.my-app-dark) .badge-new { background-color: rgba(21, 128, 61, 0.2); color: #86efac; }
 </style>
