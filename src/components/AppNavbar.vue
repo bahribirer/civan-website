@@ -55,8 +55,7 @@ const openStoreModal = () => {
 <template>
     <div class="navbar-wrapper">
         <!-- Force background color via inline style to guarantee contrast -->
-        <header class="main-header shadow-md" 
-                :style="{ backgroundColor: isDark ? '#0f172a' : 'rgba(255, 255, 255, 0.95)', borderBottom: isDark ? '1px solid #1e293b' : '1px solid rgba(0,0,0,0.05)' }">
+        <header class="main-header shadow-md">
             <div class="container navbar-inner">
                 
                 <!-- Logo -->
@@ -65,8 +64,7 @@ const openStoreModal = () => {
                         <i class="pi pi-building logo-icon"></i>
                     </div>
                     <div class="logo-text-group">
-                        <!-- Force text color via inline style -->
-                        <span class="logo-title" :style="{ color: isDark ? '#f8fafc' : '#1f2937' }">CİVANLAR</span>
+                        <span class="logo-title">CİVANLAR</span>
                         <span class="logo-subtitle">İNŞAAT & YAPI</span>
                     </div>
                 </div>
@@ -76,7 +74,6 @@ const openStoreModal = () => {
                     <a v-for="(item, index) in items" :key="index" 
                        @click="navTo(item.path)" 
                        class="menu-link" 
-                       :style="{ color: isDark ? '#e2e8f0' : '#1f2937' }"
                        v-ripple>
                         {{ item.label }}
                     </a>
@@ -97,13 +94,12 @@ const openStoreModal = () => {
                         :icon="isDark ? 'pi pi-moon' : 'pi pi-sun'" 
                         class="theme-btn p-button-rounded p-button-text" 
                         @click="toggleTheme" 
-                        :style="{ color: isDark ? '#fff' : '#374151' }"
                         v-tooltip.bottom="'Toggle Theme'"
+                        style="color: var(--c-text-main);"
                     />
 
                     <!-- Language Switcher -->
-                    <div class="lang-switch-container" @click="toggleLanguage" 
-                         :style="{ backgroundColor: isDark ? 'rgba(255,255,255,0.05)' : 'transparent' }">
+                    <div class="lang-switch-container" @click="toggleLanguage">
                         <div v-if="locale === 'tr'" class="flag-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="24" height="16" class="shadow-sm border-round-sm">
                                 <rect width="1200" height="800" fill="#E30A17"/>
@@ -111,7 +107,7 @@ const openStoreModal = () => {
                                 <circle cx="480" cy="400" r="160" fill="#E30A17"/>
                                 <path fill="#fff" d="M583.334 400l180.901 58.779-111.804-153.88v190.202l111.804-153.88z"/>
                             </svg>
-                            <span class="lang-code" :style="{ color: isDark ? '#e2e8f0' : '#1f2937' }">TR</span>
+                            <span class="lang-code" style="color: var(--c-text-main);">TR</span>
                         </div>
                         <div v-else class="flag-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="16" class="shadow-sm border-round-sm">
@@ -125,7 +121,7 @@ const openStoreModal = () => {
                                     <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
                                 </g>
                             </svg>
-                            <span class="lang-code" :style="{ color: isDark ? '#e2e8f0' : '#1f2937' }">EN</span>
+                            <span class="lang-code" style="color: var(--c-text-main);">EN</span>
                         </div>
                     </div>
 
@@ -142,7 +138,7 @@ const openStoreModal = () => {
                 <!-- Mobile Menu Button -->
                 <div class="mobile-toggle">
                      <Button icon="pi pi-bars" @click="isMobileMenuOpen = true" class="p-button-text" 
-                             :style="{ color: isDark ? '#fff' : '#374151' }" />
+                             style="color: var(--c-text-main);" />
                 </div>
             </div>
         </header>
@@ -223,6 +219,8 @@ const openStoreModal = () => {
     display: flex;
     align-items: center;
     transition: background-color 0.3s ease;
+    background-color: var(--c-bg-white); /* Anthracite background */
+    border-bottom: 1px solid var(--c-border);
 }
 
 .navbar-inner {
@@ -249,7 +247,7 @@ const openStoreModal = () => {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 6px -1px rgba(30, 58, 138, 0.2);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
 }
 
 .logo-icon { font-size: 1.25rem; color: white; }
@@ -260,6 +258,7 @@ const openStoreModal = () => {
     font-weight: 800;
     line-height: 1;
     letter-spacing: -0.5px;
+    color: var(--c-text-main);
 }
 
 .logo-subtitle {

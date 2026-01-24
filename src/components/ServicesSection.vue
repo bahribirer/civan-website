@@ -78,6 +78,9 @@ const services = computed(() => [
 .service-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    background-color: var(--c-bg-white) !important;
+    color: var(--c-text-main) !important;
+    border: 1px solid var(--c-border);
 }
 
 .service-card:hover {

@@ -30,10 +30,10 @@ const { t } = useI18n();
 .hero-section {
   position: relative;
   height: 700px;
-  /* Modern deep blue gradient with some noise/texture feel using linear gradient */
-  background: radial-gradient(circle at top right, #3b82f6 0%, transparent 40%),
-              radial-gradient(circle at bottom left, #1d4ed8 0%, transparent 40%),
-              linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  /* Anthracite Base with Gold Glows - Lighter & Richer */
+  background: radial-gradient(circle at top right, rgba(251, 191, 36, 0.25) 0%, transparent 45%),
+              radial-gradient(circle at bottom left, rgba(245, 158, 11, 0.2) 0%, transparent 45%),
+              linear-gradient(135deg, #2b3036 0%, #4b5563 100%); /* Lighter Anthracite to Slate Gray */
   background-size: cover;
   background-position: center;
   display: flex;

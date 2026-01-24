@@ -77,41 +77,44 @@ const { t } = useI18n();
     color: var(--c-primary);
     margin-bottom: 0.5rem;
 }
-:global(.my-app-dark) .page-title { color: var(--p-surface-0); }
+:global(.my-app-dark) .page-title { color: var(--c-primary); }
 
 .page-subtitle {
      font-size: 1.25rem;
     color: var(--c-text-muted);
 }
-:global(.my-app-dark) .page-subtitle { color: var(--p-surface-400); }
+:global(.my-app-dark) .page-subtitle { color: var(--c-text-muted); }
 
 .surface-card {
-    background-color: var(--p-surface-0);
+    background-color: var(--c-bg-white);
+    border: 1px solid var(--c-border);
 }
 :global(.my-app-dark) .surface-card {
-    background-color: var(--p-surface-800);
+    background-color: var(--c-bg-white);
+    border-color: var(--c-border);
 }
 
+/* Dark Default */
 .icon-box {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: rgba(30, 58, 138, 0.1);
+    background-color: rgba(251, 191, 36, 0.1); 
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--c-primary);
 }
 :global(.my-app-dark) .icon-box {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--c-primary-light);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--c-primary);
 }
 
-.text-700 { color: var(--p-text-color); }
-:global(.my-app-dark) .text-700 { color: var(--p-surface-200); }
+.text-700 { color: var(--c-text-main); }
+:global(.my-app-dark) .text-700 { color: var(--c-text-main); }
 
 .text-primary { color: var(--c-primary); }
-:global(.my-app-dark) .text-primary { color: var(--c-primary-light); }
+:global(.my-app-dark) .text-primary { color: var(--c-primary); }
 
 /* Utilities */
 .grid { display: flex; flex-wrap: wrap; margin-right: -0.5rem; margin-left: -0.5rem; }

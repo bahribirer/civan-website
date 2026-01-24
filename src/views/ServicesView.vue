@@ -126,14 +126,15 @@ const { t } = useI18n();
     margin-bottom: 1rem;
     letter-spacing: -1px;
 }
-:global(.my-app-dark) .page-title { color: #3b82f6 !important; }
+/* Dark Mode Overrides - Using Global Variables for Consistency */
+:global(.my-app-dark) .page-title { color: var(--c-primary) !important; }
 
 .page-subtitle {
      font-size: 1.35rem;
     color: var(--c-text-muted);
     font-weight: 300;
 }
-:global(.my-app-dark) .page-subtitle { color: #94a3b8 !important; }
+:global(.my-app-dark) .page-subtitle { color: var(--c-text-muted) !important; }
 
 .services-container {
     background: var(--c-bg-white);
@@ -143,8 +144,8 @@ const { t } = useI18n();
     box-shadow: var(--shadow-lg);
 }
 :global(.my-app-dark) .services-container {
-    background: #1e293b !important;
-    border-color: #334155 !important;
+    background: var(--c-bg-white) !important;
+    border-color: var(--c-border) !important;
 }
 
 .custom-tablist {
@@ -153,8 +154,8 @@ const { t } = useI18n();
     padding: 0 1rem;
 }
 :global(.my-app-dark) .custom-tablist {
-    background-color: #0f172a !important;
-    border-color: #334155 !important;
+    background-color: var(--c-bg-light) !important;
+    border-color: var(--c-border) !important;
 }
 
 .custom-tab {
@@ -166,21 +167,30 @@ const { t } = useI18n();
     background: transparent;
     border-bottom: 3px solid transparent;
 }
-:global(.my-app-dark) .custom-tab { color: #94a3b8 !important; }
+:global(.my-app-dark) .custom-tab { color: var(--c-text-muted) !important; }
 
 .custom-tab:hover {
     color: var(--c-primary);
     background-color: rgba(0,0,0,0.02);
 }
-:global(.my-app-dark) .custom-tab:hover { color: #f8fafc !important; background-color: rgba(255,255,255,0.05) !important; }
+:global(.my-app-dark) .custom-tab:hover { color: var(--c-text-main) !important; background-color: rgba(255,255,255,0.05) !important; }
 
 :deep(.p-tab-active) {
     color: var(--c-primary) !important;
     border-bottom-color: var(--c-primary) !important;
 }
 :global(.my-app-dark) :deep(.p-tab-active) {
-    color: #3b82f6 !important;
-    border-bottom-color: #3b82f6 !important;
+    color: var(--c-primary) !important;
+    border-bottom-color: var(--c-primary) !important;
+}
+
+/* Force Transparency on PrimeVue Tab Wrappers */
+:deep(.p-tabs), :deep(.p-tabpanels), :deep(.p-tabpanel) {
+    background: transparent !important;
+    color: var(--c-text-main) !important;
+}
+:global(.my-app-dark) :deep(.p-tabpanels) {
+    background: transparent !important;
 }
 
 /* Service Content Layout */
@@ -206,7 +216,7 @@ const { t } = useI18n();
     color: var(--c-primary);
     margin-bottom: 1.5rem;
 }
-:global(.my-app-dark) .text-area h3 { color: #60a5fa !important; }
+:global(.my-app-dark) .text-area h3 { color: var(--c-primary) !important; }
 
 .desc {
     font-size: 1.15rem;
@@ -215,7 +225,7 @@ const { t } = useI18n();
     margin-bottom: 2.5rem;
     opacity: 0.9;
 }
-:global(.my-app-dark) .desc { color: #e2e8f0 !important; }
+:global(.my-app-dark) .desc { color: var(--c-text-main) !important; }
 
 .feature-list {
     list-style: none;
@@ -231,7 +241,7 @@ const { t } = useI18n();
     color: var(--c-text-main);
     font-weight: 500;
 }
-:global(.my-app-dark) .feature-list li { color: #e2e8f0 !important; }
+:global(.my-app-dark) .feature-list li { color: var(--c-text-main) !important; }
 
 .feature-list i {
     color: var(--c-secondary);
@@ -253,15 +263,16 @@ const { t } = useI18n();
 
 /* Use standard CSS classes or vars for bg colors to avoid build errors. 
    Defining local classes to be safe */
-.bg-blue-50 { background-color: #ecfeff; }
-.bg-orange-50 { background-color: #fff7ed; }
-.bg-green-50 { background-color: #f0fdf4; }
-.bg-purple-50 { background-color: #faf5ff; }
-.bg-gray-50 { background-color: #f8fafc; }
-.text-gray-600 { color: #475569; }
+/* Use subtle dark-compatible tints instead of solid light colors */
+.bg-blue-50 { background-color: rgba(59, 130, 246, 0.05); }
+.bg-orange-50 { background-color: rgba(249, 115, 22, 0.05); }
+.bg-green-50 { background-color: rgba(34, 197, 94, 0.05); }
+.bg-purple-50 { background-color: rgba(168, 85, 247, 0.05); }
+.bg-gray-50 { background-color: rgba(255, 255, 255, 0.03); }
+.text-gray-600 { color: var(--c-text-muted); }
 
 :global(.my-app-dark) .visual-area {
-    background-color: rgba(255,255,255,0.03) !important; 
+    background-color: transparent !important; 
 }
 
 /* Icons in Visual Area */

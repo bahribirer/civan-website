@@ -76,7 +76,7 @@ const { t } = useI18n();
     margin-bottom: 0.5rem;
     letter-spacing: -1px;
 }
-:global(.my-app-dark) .page-title { color: var(--c-primary-light); }
+:global(.my-app-dark) .page-title { color: var(--c-primary) !important; }
 
 .page-subtitle {
     font-size: 1.25rem;
@@ -84,18 +84,19 @@ const { t } = useI18n();
 }
 
 .text-main { color: var(--c-text-main); }
-:global(.my-app-dark) .text-main { color: #e2e8f0; }
+:global(.my-app-dark) .text-main { color: var(--c-text-main); }
 
-.text-400 { color: #94a3b8; }
-.text-500 { color: #64748b; }
+/* Dark Defaults */
+.text-400 { color: var(--c-text-muted); }
+.text-500 { color: var(--c-text-muted); opacity: 0.8; }
 
 .hover-glow {
     transition: all 0.3s;
 }
 .hover-glow:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.2);
-    border-color: var(--c-primary-light);
+    box-shadow: 0 10px 30px rgba(251, 191, 36, 0.2); /* Gold Glow */
+    border-color: var(--c-primary);
 }
 
 /* Force Surface Card Dark Mode */
@@ -104,10 +105,10 @@ const { t } = useI18n();
     border: 1px solid var(--c-border);
     border-radius: 16px;
 }
-
+/* Redundant dark override removed or kept compliant */
 :global(.my-app-dark) .surface-card {
-    background-color: #1e293b !important; /* Force Slate 800 */
-    border-color: #334155 !important;
+    background-color: var(--c-bg-white) !important;
+    border-color: var(--c-border) !important;
 }
 
 /* Utilities re-definition */
@@ -140,7 +141,7 @@ const { t } = useI18n();
 .line-height-3 { line-height: 1.6; }
 .text-lg { font-size: 1.125rem; }
 .text-green-500 { color: #10b981; }
-.bg-gray-100 { background-color: #f1f5f9; }
+.bg-gray-100 { background-color: rgba(255,255,255,0.05); } /* Dark Default */
 :global(.my-app-dark) .bg-gray-100 { background-color: rgba(255,255,255,0.05); }
 .shadow-lg { box-shadow: var(--shadow-lg); }
 .shadow-md { box-shadow: var(--shadow-md); }

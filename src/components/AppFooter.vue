@@ -80,20 +80,20 @@ const { t } = useI18n();
 
 <style scoped>
 .app-footer {
-  background-color: #0f172a; /* Always dark for footer looks better generally */
-  color: #94a3b8;
+  background-color: #1a1e22; /* Deepest Anthracite for footer */
+  color: var(--c-text-muted);
   font-size: 0.95rem;
-  border-top: 1px solid transparent;
+  border-top: 1px solid var(--c-border);
 }
 
 :global(.my-app-dark) .app-footer {
-  background-color: #020617; /* Even darker in dark mode? Or same. Let's make it consistent. */
-  border-top: 1px solid var(--p-surface-800);
+  background-color: #1a1e22; 
+  border-top: 1px solid var(--c-border);
 }
 
 .footer-top {
     padding: 5rem 0 3rem;
-    background: radial-gradient(circle at top right, #1e293b 0%, transparent 35%);
+    background: radial-gradient(circle at top right, var(--c-bg-white) 0%, transparent 35%); /* Subtle highlight */
 }
 
 .footer-content {
@@ -247,10 +247,10 @@ const { t } = useI18n();
 
 /* Bottom */
 .footer-bottom {
-  border-top: 1px solid #1e293b;
+  border-top: 1px solid var(--c-border);
   padding: 1.5rem 0;
   font-size: 0.875rem;
-  background-color: #020617;
+  background-color: #15191d; /* Almost black Anthracite */
 }
 
 .legal-links a {

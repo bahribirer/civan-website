@@ -64,22 +64,22 @@ const { t } = useI18n();
 :global(.my-app-dark) .page-subtitle { color: var(--p-surface-400); }
 
 .surface-card {
-    background-color: var(--p-surface-0);
-    border: 1px solid var(--p-surface-200);
+    background-color: var(--c-bg-white);
+    border: 1px solid var(--c-border);
 }
 :global(.my-app-dark) .surface-card {
-    background-color: var(--p-surface-800);
-    border-color: var(--p-surface-700);
+    background-color: var(--c-bg-white);
+    border-color: var(--c-border);
 }
 
 .text-primary { color: var(--c-primary); }
-:global(.my-app-dark) .text-primary { color: var(--c-primary-light); }
+:global(.my-app-dark) .text-primary { color: var(--c-primary); }
 
-.text-700 { color: var(--p-text-color); }
-:global(.my-app-dark) .text-700 { color: var(--p-surface-200); }
+.text-700 { color: var(--c-text-main); }
+:global(.my-app-dark) .text-700 { color: var(--c-text-main); }
 
-.bg-gray-200 { background-color: #e5e7eb; }
-:global(.my-app-dark) .bg-gray-200 { background-color: var(--p-surface-700); }
+.bg-gray-200 { background-color: rgba(255,255,255,0.05); }
+:global(.my-app-dark) .bg-gray-200 { background-color: rgba(255,255,255,0.05); }
 
 .hover-effect {
     transition: transform 0.3s;

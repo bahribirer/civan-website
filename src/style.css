@@ -2,52 +2,71 @@
 
 /* Base styles */
 :root {
-  /* Civanlar Brand Colors */
-  --c-primary: #1e3a8a;
-  /* Deep Royal Blue */
-  --c-primary-light: #3b82f6;
+  /* Civanlar Brand Colors - Anthracite & Gold Theme */
+  --c-primary: #fbbf24;
+  /* Amber 400 - Premium Gold Text/Accents */
+  --c-primary-light: #fcd34d;
+  /* Amber 300 */
   --c-secondary: #f59e0b;
+  /* Amber 500 - Deeper Gold */
 
-  /* Light Theme Defaults */
-  --c-text-main: #1f2937;
-  --c-text-muted: #6b7280;
+  /* Anthracite / Dark Theme Defaults - BRIGHTER VERSION */
+  --c-text-main: #f9fafb;
+  /* Gray 50 - Brighter White for contrast */
+  --c-text-muted: #d1d5db;
+  /* Gray 300 - Brighter Gray */
 
-  --c-bg-light: #f9fafb;
-  --c-bg-white: #ffffff;
-  --c-border: #e5e7eb;
+  /* Anthracite Palette - Lighter/Brighter */
+  --c-bg-light: #2b3036;
+  /* Brighter Anthracite Background */
+  --c-bg-white: #363b42;
+  /* Even Brighter Anthracite for Cards */
+  --c-border: #4d545e;
+  /* Visible Border */
 
   --font-main: 'Inter', sans-serif;
   --font-heading: 'Outfit', sans-serif;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-glow: 0 0 15px rgba(30, 58, 138, 0.15);
+  /* Shadows - Adjusted for Dark */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 15px rgba(251, 191, 36, 0.15);
+  /* Gold glow */
 }
 
-/* Dark Theme Overrides */
+/* Global Component Overrides for Dark Theme */
+.p-card,
+.p-panel,
+.p-dialog {
+  background-color: var(--c-bg-white) !important;
+  color: var(--c-text-main) !important;
+  border-color: var(--c-border) !important;
+}
+
+.p-card-content,
+.p-card-title,
+.p-card-subtitle {
+  color: var(--c-text-main) !important;
+}
+
+/* Dark Theme Overrides (Redundant if default is dark, but kept for toggle consistency if needed) */
 :root.my-app-dark {
-  --c-primary: #3b82f6;
-  /* Lighter blue for better contrast on dark */
-  --c-primary-light: #93c5fd;
+  --c-primary: #fbbf24;
+  --c-primary-light: #fcd34d;
 
-  --c-text-main: #f1f5f9;
-  /* Slate 100 */
-  --c-text-muted: #94a3b8;
-  /* Slate 400 */
+  --c-text-main: #f9fafb;
+  --c-text-muted: #d1d5db;
 
-  --c-bg-light: #020617;
-  /* Slate 950 - Very Deep */
-  --c-bg-white: #0f172a;
-  /* Slate 900 - Cards */
-  --c-border: #1e293b;
-  /* Slate 800 */
+  --c-bg-light: #23272b;
+  /* Slightly darker in "Dark Mode" switch if desired, or same */
+  --c-bg-white: #2f343a;
+  --c-border: #454c55;
 
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.5);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.5);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.6);
-  --shadow-glow: 0 0 25px rgba(59, 130, 246, 0.2);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 25px rgba(96, 165, 250, 0.2);
 }
 
 body {
@@ -102,14 +121,20 @@ a {
 }
 
 .text-primary {
-  color: #1e3a8a;
+  color: var(--c-primary);
+  /* Uses Gold by default now */
 }
 
+/* Light Theme (if toggled back) needs darker gold/amber */
+:root:not(.my-app-dark) .text-primary {
+  color: #d97706;
+  /* Amber 600 for light bg compatibility if needed */
+}
+
+/* If the user explicitly enables dark mode class */
 :root.my-app-dark .text-primary {
-  color: #60a5fa;
+  color: var(--c-primary);
 }
-
-/* Vivid blue in dark */
 
 .text-secondary {
   color: var(--c-secondary);
@@ -123,22 +148,23 @@ a {
   /* Modern roundness */
 }
 
+/* Override removed: using variables primarily. 
+   If explicit dark class matches default, variables handle it. */
 :root.my-app-dark .surface-card {
-  background-color: #1e293b;
-  /* Slate 800 - Explicitly lighter than bg */
-  border-color: #334155;
-  /* Slate 700 */
+  background-color: var(--c-bg-white);
+  border-color: var(--c-border);
 }
 
 /* Inner Containers / Placeholders */
 .bg-gray-100 {
-  background-color: #f1f5f9;
-}
-
-:root.my-app-dark .bg-gray-100 {
-  background-color: rgba(255, 255, 255, 0.05) !important;
+  background-color: rgba(255, 255, 255, 0.05);
+  /* Dark theme subtle highlight */
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
+
+/* Light theme revert? Assuming default is now Dark. 
+   If previously bg-gray-100 was #f1f5f9, we need that ONLY if we supported light mode switch. 
+   But since we made ROOT dark, this is the default. */
 
 /* Animations */
 .fadein-up {

@@ -82,14 +82,14 @@ const categories = [
     border: 1px solid var(--c-border);
 }
 :global(.my-app-dark) .surface-card {
-    background-color: #1e293b !important;
-    border-color: #334155 !important;
+    background-color: var(--c-bg-white) !important;
+    border-color: var(--c-border) !important;
 }
 
 .text-primary { color: var(--c-primary); }
-:global(.my-app-dark) .text-primary { color: #60a5fa !important; }
+:global(.my-app-dark) .text-primary { color: var(--c-primary); }
 
-.bg-gray-100 { background-color: #f3f4f6; }
+.bg-gray-100 { background-color: rgba(255,255,255,0.05); }
 :global(.my-app-dark) .bg-gray-100 { background-color: rgba(255,255,255,0.05) !important; }
 
 .hover-effect {
