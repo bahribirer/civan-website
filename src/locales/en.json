@@ -27,6 +27,16 @@
         "paints": "Paints",
         "tiles": "Ceramics & Tiles"
     },
+    "process": {
+        "title": "Don't Miss Our Special Offers",
+        "subtitle": "Call now or fill out the form to enjoy our privileges",
+        "step1_title": "Call Now",
+        "step1_desc": "Call for solutions or fill out the quote form",
+        "step2_title": "Get a Quote",
+        "step2_desc": "We will prepare and send our offer according to your requests",
+        "step3_title": "Let's Deliver",
+        "step3_desc": "Delivery/application in the determined process after your approval"
+    },
     "about": {
         "title": "About Us",
         "subtitle": "Deep-rooted experience from the field to your projects.",

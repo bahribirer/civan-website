@@ -51,9 +51,6 @@ const services = computed(() => [
                     {{ service.description }}
                 </p>
             </template>
-            <template #footer>
-                <Button :label="t('home_services.button')" class="p-button-text" />
-            </template>
         </Card>
       </div>
     </div>

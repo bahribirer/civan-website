@@ -13,12 +13,8 @@ const { t } = useI18n();
         <p class="page-subtitle">{{ t('contact.subtitle') }}</p>
       </div>
 
-      <div class="grid">
-        <div class="col-12 md:col-6 mb-4">
-             <ContactForm />
-        </div>
-        
-        <div class="col-12 md:col-6 mb-4 md:pl-5">
+      <div class="grid justify-content-center">
+        <div class="col-12 md:col-8 mb-4">
             <div class="info-card card shadow-1 p-5 border-round-xl surface-card h-full">
                 <h3 class="text-2xl font-bold text-primary mb-4">{{ t('contact.visit') }}</h3>
                 <div class="info-item mb-4 flex">
@@ -55,7 +51,7 @@ const { t } = useI18n();
                 </div>
 
                 <!-- Map Placeholder -->
-                <div class="map-container mt-5 border-round overflow-hidden" style="height: 250px; background: #eee;">
+                <div class="map-container mt-5 border-round overflow-hidden" style="height: 350px; background: #eee;">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3006.0000000000005!2d29.02!3d41.11!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDA2JzM2LjAiTiAyOcKwMDEnMTIuMCJF!5e0!3m2!1sen!2str!4v1630000000000!5m2!1sen!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>

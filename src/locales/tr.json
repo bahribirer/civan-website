@@ -27,6 +27,16 @@
         "paints": "Boyalar",
         "tiles": "Seramik & Fayans"
     },
+    "process": {
+        "title": "Size Özel Fırsatlarımızı Kaçırmayın",
+        "subtitle": "Hemen arayın yada teklif formunu doldurun ayrıcalıklarımızdan faydalanın",
+        "step1_title": "Hemen arayın",
+        "step1_desc": "Çözümlerimiz için arayın veya teklif formunu doldurun",
+        "step2_title": "Teklifimizi gönderelim",
+        "step2_desc": "Talepleriniz doğrultusunda teklifimizi hazırlayalım gönderelim",
+        "step3_title": "Teslim Edelim",
+        "step3_desc": "Onayınızın ardından belirlenen süreçte teslimat/uygulama yapalım"
+    },
     "about": {
         "title": "Hakkımızda",
         "subtitle": "Sahadan gelen köklü tecrübe, projelerinize güç katıyor.",

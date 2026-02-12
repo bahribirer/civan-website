@@ -3,35 +3,37 @@
 /* Base styles */
 :root {
   /* Civanlar Brand Colors - Anthracite & Gold Theme */
-  --c-primary: #fbbf24;
-  /* Amber 400 - Premium Gold Text/Accents */
-  --c-primary-light: #fcd34d;
-  /* Amber 300 */
+  --c-primary: #ea580c;
+  /* Orange-600 - Stronger Orange for Light Theme High Contrast */
+  --c-primary-light: #f97316;
+  /* Orange-500 */
   --c-secondary: #f59e0b;
-  /* Amber 500 - Deeper Gold */
+  /* Amber 500 - Gold Accents */
 
-  /* Anthracite / Dark Theme Defaults - BRIGHTER VERSION */
-  --c-text-main: #f9fafb;
-  /* Gray 50 - Brighter White for contrast */
-  --c-text-muted: #d1d5db;
-  /* Gray 300 - Brighter Gray */
+  /* Premium Light Theme Defaults - Neutral Gray Fix */
+  --c-text-main: #111827;
+  /* Gray 900 - Pure Neutral Black/Gray */
+  --c-text-muted: #6b7280;
+  /* Gray 500 - Neutral Muted text */
+  --c-text-invert: #ffffff;
+  /* White text for dark backgrounds */
 
-  /* Anthracite Palette - Lighter/Brighter */
-  --c-bg-light: #2b3036;
-  /* Brighter Anthracite Background */
-  --c-bg-white: #363b42;
-  /* Even Brighter Anthracite for Cards */
-  --c-border: #4d545e;
-  /* Visible Border */
+  /* Backgrounds */
+  --c-bg-light: #f9fafb;
+  /* Gray 50 - Neutral off-white */
+  --c-bg-white: #ffffff;
+  /* Pure white for cards/panels */
+  --c-border: #e5e7eb;
+  /* Gray 200 - Neutral border */
 
   --font-main: 'Inter', sans-serif;
   --font-heading: 'Outfit', sans-serif;
 
-  /* Shadows - Adjusted for Dark */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-  --shadow-glow: 0 0 15px rgba(251, 191, 36, 0.15);
+  /* Shadows - Soft & Premium */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 0 15px rgba(245, 158, 11, 0.3);
   /* Gold glow */
 }
 

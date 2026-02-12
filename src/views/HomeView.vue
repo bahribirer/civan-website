@@ -1,5 +1,6 @@
 <script setup>
 import HomeHero from '../components/HomeHero.vue';
+import ProcessSteps from '../components/ProcessSteps.vue';
 import ServicesSection from '../components/ServicesSection.vue';
 import AboutSummary from '../components/AboutSummary.vue';
 </script>
@@ -8,6 +9,8 @@ import AboutSummary from '../components/AboutSummary.vue';
   <div class="home-view">
     <HomeHero />
     
+    <ProcessSteps />
+
     <AboutSummary />
 
     <ServicesSection />
@@ -25,8 +28,7 @@ import AboutSummary from '../components/AboutSummary.vue';
 
 <style scoped>
 .py-6 { padding: 6rem 0; }
-.bg-primary { background-color: #1e293b; } /* Slate 800 - Classic Dark Gray */
-:global(.my-app-dark) .bg-primary { background-color: #0f172a; }
+.bg-primary { background-color: var(--c-primary); } /* Orange Brand Color */
 .text-white { color: white; }
 .text-center { text-align: center; }
 .mb-4 { margin-bottom: 2rem; }

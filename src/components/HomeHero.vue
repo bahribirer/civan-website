@@ -1,73 +1,102 @@
 <script setup>
+import { ref } from 'vue';
+import Carousel from 'primevue/carousel';
 import Button from 'primevue/button';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 
 const router = useRouter();
 const { t } = useI18n();
+
+const slides = ref([
+    {
+        image: 'https://placehold.co/1920x800?text=Hero+Image+1',
+        title: t('hero.title'),
+        subtitle: t('hero.subtitle'),
+        hasContent: true 
+    },
+    {
+        image: 'https://placehold.co/1920x800?text=Hero+Image+2',
+        title: 'Kaliteli Yalıtım Çözümleri',
+        subtitle: 'Projeleriniz için en iyi su ve ısı yalıtım ürünleri.',
+        hasContent: true
+    },
+    {
+        image: 'https://placehold.co/1920x800?text=Hero+Image+3',
+        hasContent: false
+    }
+]);
 </script>
 
 <template>
-  <section class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <div class="content-wrapper">
-         <span class="hero-label">{{ t('hero.label') }}</span>
-         <h1 class="hero-title" v-html="t('hero.title')"></h1>
-         <p class="hero-subtitle">
-            {{ t('hero.subtitle') }}
-         </p>
-         <div class="hero-actions">
-           <Button :label="t('nav.getQuote')" icon="pi pi-arrow-right" iconPos="right" class="p-button-lg p-button-warning action-btn shadow-4" @click="router.push('/contact')" />
-           <Button :label="t('nav.exploreProducts')" icon="pi pi-box" class="p-button-lg p-button-outlined text-white action-btn ml-3" @click="router.push('/products')" />
-         </div>
-      </div>
-    </div>
+  <section class="hero-carousel-section">
+    <Carousel :value="slides" :numVisible="1" :numScroll="1" :circular="true" :autoplayInterval="5000" :showNavigators="false" :showIndicators="true" class="hero-carousel">
+        <template #item="slotProps">
+            <div class="hero-slide" :style="{ backgroundImage: `url(${slotProps.data.image})` }">
+                <div class="overlay"></div>
+                <div v-if="slotProps.data.hasContent" class="container content-container">
+                    <div class="slide-content">
+                        <span class="slide-label" v-if="slotProps.index === 0">{{ t('hero.label') }}</span>
+                        <h1 class="slide-title" v-html="slotProps.data.title"></h1>
+                        <p class="slide-subtitle">{{ slotProps.data.subtitle }}</p>
+                        <div class="slide-actions" v-if="slotProps.index === 0">
+                            <Button :label="t('nav.getQuote')" icon="pi pi-arrow-right" iconPos="right" class="p-button-lg p-button-warning action-btn shadow-4" @click="router.push('/contact')" />
+                            <Button :label="t('nav.exploreProducts')" icon="pi pi-box" class="p-button-lg p-button-outlined text-white action-btn ml-3" @click="router.push('/products')" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </Carousel>
   </section>
 </template>
 
 <style scoped>
-.hero-section {
-  position: relative;
-  height: 700px;
-  /* Anthracite Base with Gold Glows - Lighter & Richer */
-  background: radial-gradient(circle at top right, rgba(251, 191, 36, 0.25) 0%, transparent 45%),
-              radial-gradient(circle at bottom left, rgba(245, 158, 11, 0.2) 0%, transparent 45%),
-              linear-gradient(135deg, #2b3036 0%, #4b5563 100%); /* Lighter Anthracite to Slate Gray */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  color: white;
-  overflow: hidden;
-  margin-top: -1px; /* overlap border */
+.hero-carousel-section {
+    width: 100%;
+    position: relative;
+    /* Ensure no gap if navbar is overlaid or adjacent */
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 2px, transparent 2px, transparent 4px);
+.hero-carousel {
+    width: 100%;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
+.hero-slide {
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.content-wrapper {
-  max-width: 800px;
-  animation: slideUp 0.8s ease-out;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+    z-index: 1;
 }
 
-.hero-label {
+.content-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.slide-content {
+    max-width: 800px;
+    color: white;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.slide-label {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(5px);
     border-radius: 50px;
     font-size: 0.85rem;
@@ -75,74 +104,79 @@ const { t } = useI18n();
     letter-spacing: 2px;
     margin-bottom: 1.5rem;
     color: #f59e0b;
-    border: 1px solid rgba(245, 158, 11, 0.3);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    text-transform: uppercase;
 }
 
-.hero-title {
-  font-size: 4.5rem;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  color: white;
-  font-weight: 800;
-  letter-spacing: -1px;
+.slide-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
-.highlight {
-    color: #f59e0b; /* Amber 500 */
-    position: relative;
-    display: inline-block;
-}
-
-.hero-subtitle {
-  font-size: 1.35rem;
-  margin-bottom: 3rem;
-  opacity: 0.9;
-  line-height: 1.6;
-  max-width: 600px;
-  color: #e2e8f0;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+.slide-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    max-width: 600px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 .action-btn {
     font-weight: 700;
     padding: 1rem 2rem;
     border-radius: 8px;
-    transition: transform 0.2s;
-}
-
-.action-btn:hover {
-    transform: translateY(-2px);
 }
 
 .ml-3 { margin-left: 1rem; }
 
-/* Animation */
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* PrimeVue Carousel Indicator Styling */
+:deep(.p-carousel-indicators) {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    justify-content: center;
+    gap: 0.8rem;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
 }
 
-/* Responsive adjustments */
+:deep(.p-carousel-indicator) {
+    margin: 0;
+}
+
+:deep(.p-carousel-indicator-button) {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    border: 2px solid rgba(255, 255, 255, 0.6) !important;
+    padding: 0;
+    transition: all 0.3s;
+}
+
+:deep(.p-carousel-indicator.p-active .p-carousel-indicator-button) {
+    background-color: var(--c-primary) !important; /* Orange Active */
+    border-color: var(--c-primary) !important;
+    width: 14px;
+    height: 14px; /* Slightly larger for active */
+    box-shadow: 0 0 15px rgba(234, 88, 12, 0.6);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .hero-section {
-      height: 600px;
-  }
-  .hero-title {
-    font-size: 2.75rem;
-  }
-  .hero-subtitle {
-      font-size: 1.1rem;
-  }
+    .hero-slide { height: 500px; }
+    .slide-title { font-size: 2.5rem; }
+    .slide-subtitle { font-size: 1rem; }
 }
 </style>

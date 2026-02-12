@@ -80,7 +80,7 @@ const { t } = useI18n();
 
 <style scoped>
 .app-footer {
-  background-color: #1a1e22; /* Deepest Anthracite for footer */
+  background-color: var(--c-bg-light); /* Light Background */
   color: var(--c-text-muted);
   font-size: 0.95rem;
   border-top: 1px solid var(--c-border);
@@ -93,7 +93,7 @@ const { t } = useI18n();
 
 .footer-top {
     padding: 5rem 0 3rem;
-    background: radial-gradient(circle at top right, var(--c-bg-white) 0%, transparent 35%); /* Subtle highlight */
+    background: radial-gradient(circle at top right, rgba(234, 88, 12, 0.03) 0%, transparent 35%); /* Subtle Orange highlight */
 }
 
 .footer-content {
@@ -110,7 +110,7 @@ const { t } = useI18n();
 .logo-text {
     font-size: 1.5rem;
     font-weight: 800;
-    color: #fff;
+    color: var(--c-text-main); /* Dark Text */
     display: block;
     line-height: 1;
 }
@@ -125,10 +125,11 @@ const { t } = useI18n();
     line-height: 1.6;
     margin-bottom: 1.5rem;
     max-width: 350px;
+    color: var(--c-text-muted);
 }
 
 .footer-col h3 {
-  color: #fff;
+  color: var(--c-text-main); /* Dark Text */
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
   position: relative;
@@ -158,7 +159,7 @@ const { t } = useI18n();
 }
 
 .footer-links a {
-    color: #94a3b8;
+    color: var(--c-text-muted);
     text-decoration: none;
     transition: all 0.2s;
     display: flex;
@@ -169,11 +170,11 @@ const { t } = useI18n();
     font-size: 0.8rem;
     margin-right: 0.5rem;
     color: var(--c-secondary);
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .footer-links a:hover {
-    color: #fff;
+    color: var(--c-primary);
     transform: translateX(5px);
 }
 
@@ -192,18 +193,21 @@ const { t } = useI18n();
 .icon-box {
     width: 40px;
     height: 40px;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--c-bg-white);
+    border: 1px solid var(--c-border);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--c-secondary);
     flex-shrink: 0;
+    box-shadow: var(--shadow-sm);
 }
 
 .contact-item:hover .icon-box {
     background-color: var(--c-secondary);
     color: #fff;
+    border-color: var(--c-secondary);
 }
 
 .label {
@@ -212,14 +216,15 @@ const { t } = useI18n();
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
-    color: #64748b;
+    color: var(--c-text-muted);
     margin-bottom: 0.25rem;
 }
 
 .contact-item p {
     margin: 0;
-    color: #e2e8f0;
+    color: var(--c-text-main);
     line-height: 1.4;
+    font-weight: 500;
 }
 
 /* Social */
@@ -231,17 +236,21 @@ const { t } = useI18n();
 .social-icon {
     width: 36px;
     height: 36px;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--c-bg-white);
+    border: 1px solid var(--c-border);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    color: #fff;
+    color: var(--c-text-muted);
     transition: all 0.3s;
+    box-shadow: var(--shadow-sm);
 }
 
 .social-icon:hover {
     background-color: var(--c-primary);
+    color: #fff;
+    border-color: var(--c-primary);
     transform: translateY(-3px);
 }
 
@@ -250,7 +259,8 @@ const { t } = useI18n();
   border-top: 1px solid var(--c-border);
   padding: 1.5rem 0;
   font-size: 0.875rem;
-  background-color: #15191d; /* Almost black Anthracite */
+  background-color: var(--c-bg-white); /* White bottom bar */
+  color: var(--c-text-muted);
 }
 
 .legal-links a {
